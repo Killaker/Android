@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/base_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_shop_selection_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17.0sp" android:textColor="@color/textPrimary" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Select_the_country_where_you_want_to_shop" />
+        <Spinner android:id="@id/settings_shop_selection_spinner" android:background="@drawable/spinner_selector_black_baseline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/base_margin_vertical_half" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_licenses_layout" android:paddingTop="@dimen/base_margin_vertical" android:paddingBottom="@dimen/base_margin_vertical" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17.0sp" android:textColor="@color/textPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Open_source_libraries" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/textSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/License_details_for_open_source_software" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/settings_buttons_layout" android:background="@color/line_light_grey" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1.0">
+        <Button android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:id="@id/settings_cancel" android:background="@drawable/button_secondary_action_ripple" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="8.0dip" android:text="@string/Cancel" android:layout_weight="0.5" android:textAllCaps="true" style="?android:attr/borderlessButtonStyle" />
+        <Button android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:id="@id/settings_apply" android:background="@drawable/button_primary_action_ripple" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="8.0dip" android:text="@string/Apply" android:layout_weight="0.5" android:textAllCaps="true" style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/shipping_dialog_toolbar" android:background="?colorAccent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="3.0dip">
+        <ImageView android:id="@id/shipping_dialog_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_arrow" android:contentDescription="@string/content_description_back_arrow" />
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/textIconColorPrimary" android:id="@id/shipping_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Shipping" />
+    </LinearLayout>
+    <ListView android:id="@id/shipping_dialog_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/shipping_dialog_toolbar" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/shipping_dialog_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_below="@id/shipping_dialog_toolbar">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/Shipping_is_empty" style="@style/emptyLayoutText" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/shipping_dialog_progressBar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_below="@id/shipping_dialog_toolbar" android:layout_centerHorizontal="true" />
+</RelativeLayout>

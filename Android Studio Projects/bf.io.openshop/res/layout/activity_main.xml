@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/main_drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/action_toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/main_toolbar" layout="@layout/toolbar_layout" />
+        <FrameLayout android:orientation="vertical" android:id="@id/main_content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <fragment android:name="bf.io.openshop.ux.fragments.DrawerFragment" android:layout_gravity="start" android:id="@id/main_navigation_drawer_fragment" android:layout_width="@dimen/navigation_drawer_size" android:layout_height="fill_parent" app:layout="@layout/fragment_drawer" />
+</android.support.v4.widget.DrawerLayout>

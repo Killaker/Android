@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shipping_separator" android:background="@color/line_light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/shipping_is_selected" android:background="@color/colorAccent" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+        <View android:layout_width="4.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/textPrimary" android:ellipsize="marquee" android:id="@id/shipping_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:id="@id/shipping_description" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/colorAccent" android:id="@id/shipping_price" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <View android:layout_width="8.0dip" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/shipping_shop_info" android:background="?selectableItemBackgroundBorderless" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/branch_detail" android:contentDescription="@string/content_description_shipping_info" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="@dimen/navigation_drawer_size" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/drawer_recycler" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/drawer_submenu_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="15.0sp" android:textStyle="normal" android:gravity="start" android:id="@id/drawer_submenu_back_btn" android:background="@drawable/ripple_selector_transparent" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/All_categories" android:drawableLeft="@drawable/arrow_left_black" android:drawablePadding="7.0dip" android:drawableStart="@drawable/arrow_left_black" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff646464" android:gravity="center" android:id="@id/drawer_submenu_title" android:background="#ffdedede" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView android:id="@id/drawer_submenu_recycler" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/drawer_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <Button android:id="@id/drawer_retry_btn" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Retry" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/buttonPrimaryStyle" />
+</RelativeLayout>

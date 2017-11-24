@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/base_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="@color/textPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Order_details" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/base_margin_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Order_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_id" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Name_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Date_created_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_dateCreated" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Total_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_total" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Shipping_type_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_shipping_method" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Shipping_price_colon" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/list_item_order_header_shipping_price" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

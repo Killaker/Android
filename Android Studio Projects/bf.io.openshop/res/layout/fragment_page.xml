@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingRight="@dimen/base_margin_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/page_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Content_is_empty" style="@style/emptyLayoutText" />
+    <LinearLayout android:orientation="vertical" android:id="@id/page_content_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0sp" android:textColor="@color/textPrimary" android:gravity="center" android:id="@id/page_title" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <WebView android:id="@id/page_content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dialog_update_cart_item_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="19.0sp" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Update_item" />
+        <TextView android:textSize="16.0sp" android:id="@id/dialog_update_cart_item_title" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/dialog_update_cart_item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_update_cart_item_title_layout">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:id="@id/dialog_update_cart_item_color_spin" android:background="@drawable/spinner_background_black_baseline" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Spinner android:id="@id/dialog_update_cart_item_size_spin" android:background="@drawable/spinner_background_black_baseline" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+            <Spinner android:id="@id/dialog_update_cart_item_quantity_spin" android:background="@drawable/spinner_background_black_baseline" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" style="?android:attr/buttonBarStyle">
+            <Button android:textSize="18.0sp" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:id="@id/dialog_update_cart_item_cancel_btn" android:background="@drawable/button_secondary_action_ripple" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="1.0dip" android:minHeight="1.0dip" android:text="@string/Cancel" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+            <Button android:textSize="18.0sp" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:id="@id/dialog_update_cart_item_save_btn" android:background="@drawable/button_primary_action_ripple" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:minWidth="1.0dip" android:minHeight="1.0dip" android:text="@string/Save" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/dialog_update_cart_item_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="75.0dip" android:layout_below="@id/dialog_update_cart_item_title_layout" android:layout_centerHorizontal="true" />
+</RelativeLayout>

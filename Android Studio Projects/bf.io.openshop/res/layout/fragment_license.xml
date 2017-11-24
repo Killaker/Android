@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/base_margin_half" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="@color/textPrimary" android:id="@id/license_header" android:padding="@dimen/base_margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Open_source_libraries" />
+    <WebView android:id="@id/license_web_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/license_header" />
+    <ProgressBar android:id="@id/license_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+</RelativeLayout>

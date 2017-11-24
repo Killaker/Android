@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/payment_separator" android:background="@color/line_light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/payment_is_selected" android:background="@color/colorAccent" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+        <View android:layout_width="4.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/textPrimary" android:ellipsize="marquee" android:id="@id/payment_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/colorAccent" android:id="@id/payment_price" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:id="@id/payment_description" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

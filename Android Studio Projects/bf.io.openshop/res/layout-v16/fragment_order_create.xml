@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/order_create_scroll_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/base_margin_vertical" android:paddingBottom="@dimen/base_margin_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingRight="@dimen/base_margin_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textBlack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Summary" android:textAllCaps="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/order_create_cart_items_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:gravity="end" android:id="@id/order_create_total_price" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View android:background="@color/background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/base_margin_vertical" android:layout_marginTop="@dimen/base_margin_vertical" android:layout_marginBottom="@dimen/base_margin_vertical" />
+            <RelativeLayout android:paddingLeft="@dimen/base_margin_horizontal" android:paddingRight="@dimen/base_margin_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/order_create_delivery_shipping_layout" android:background="?selectableItemBackground" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textBlack" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Shipping_method" android:textAllCaps="true" />
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/spinner_background_black_baseline" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:ellipsize="end" android:id="@id/order_create_delivery_shipping_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Choose_shipping_method" android:layout_weight="1.0" />
+                        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/order_create_delivery_shipping_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/order_create_delivery_payment_layout" android:background="?selectableItemBackground" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/order_create_delivery_shipping_layout">
+                    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/textBlack" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Payment" android:textAllCaps="true" />
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/spinner_background_black_baseline" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:ellipsize="end" android:id="@id/order_create_delivery_payment_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Choose_payment_method" android:layout_weight="1.0" />
+                        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/order_create_delivery_payment_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ProgressBar android:id="@id/delivery_progress" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="@color/background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/base_margin_vertical" android:layout_marginTop="@dimen/base_margin_vertical" android:layout_marginBottom="@dimen/base_margin_vertical" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingRight="@dimen/base_margin_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textBlack" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Shipping_details" android:textAllCaps="true" />
+                <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_name_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/Name_colon" android:singleLine="true" android:inputType="textPersonName" android:nextFocusForward="@id/order_create_street" />
+                </android.support.design.widget.TextInputLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_street_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.65">
+                        <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_street" android:nextFocusRight="@id/order_create_houseNumber" android:nextFocusDown="@id/order_create_houseNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/Street" android:singleLine="true" android:inputType="textPostalAddress" android:nextFocusForward="@id/order_create_houseNumber" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_houseNumber_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.35">
+                        <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_houseNumber" android:nextFocusLeft="@id/order_create_street" android:nextFocusRight="@id/order_create_city" android:nextFocusDown="@id/order_create_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/House_code" android:singleLine="true" android:inputType="textPostalAddress" android:nextFocusForward="@id/order_create_city" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true" android:weightSum="1.0">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_city_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.65">
+                        <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_city" android:nextFocusLeft="@id/order_create_houseNumber" android:nextFocusRight="@id/order_create_zip" android:nextFocusDown="@id/order_create_zip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/City" android:singleLine="true" android:inputType="textPostalAddress" android:nextFocusForward="@id/order_create_zip" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_zip_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.35">
+                        <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_zip" android:nextFocusLeft="@id/order_create_city" android:nextFocusRight="@id/order_create_email" android:nextFocusDown="@id/order_create_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/ZIP" android:singleLine="true" android:inputType="number" android:nextFocusForward="@id/order_create_email" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_email_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/Email" android:singleLine="true" android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_phone_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/textPrimary" android:id="@id/order_create_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:hint="@string/Phone" android:singleLine="true" android:inputType="phone" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:textColorHint="@color/colorPrimaryLight" android:id="@id/order_create_note_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="18.0sp" android:textColor="@color/textPrimary" android:id="@id/order_create_note" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:minHeight="50.0dip" android:hint="@string/Note" android:maxLength="1024" android:inputType="textCapSentences|textMultiLine" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <View android:background="@color/background_grey" android:layout_width="fill_parent" android:layout_height="@dimen/base_margin_vertical" android:layout_marginTop="@dimen/base_margin_vertical_half" android:layout_marginBottom="@dimen/base_margin_vertical_half" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingRight="@dimen/base_margin_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/base_margin_vertical" android:layout_marginBottom="@dimen/base_margin_vertical">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/textSecondary" android:id="@id/order_create_summary_terms_and_condition" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Click_on_Order_to_allow_our_Terms_and_Conditions" android:layout_weight="1.0" android:fontFamily="sans-serif-light" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/base_margin_horizontal_half">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/textPrimary" android:gravity="end" android:id="@id/order_create_summary_total_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/textSecondary" android:gravity="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/including_VAT" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:id="@id/order_create_finish" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Finish_order" style="@style/buttonPrimaryStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

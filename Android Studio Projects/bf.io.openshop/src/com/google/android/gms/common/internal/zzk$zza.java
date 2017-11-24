@@ -1,0 +1,10 @@
+package com.google.android.gms.common.internal;
+
+import android.os.*;
+
+public interface zza
+{
+    boolean isConnected();
+    
+    Bundle zzoi();
+}

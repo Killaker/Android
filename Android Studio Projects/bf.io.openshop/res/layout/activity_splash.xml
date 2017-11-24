@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/splash_intro_screen" android:background="@drawable/splash_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/content_description_intro_screen" />
+    <RelativeLayout android:id="@id/splash_content" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/login_background" android:scaleType="centerCrop" android:contentDescription="@string/content_description_background" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/splash_content_no_connection" android:background="@color/black_transparent_70percent" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingTop="10.0dip" android:paddingRight="@dimen/base_margin_horizontal" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:paddingTop="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/No_network_connection" android:lines="2" />
+            <Button android:id="@id/splash_re_run_btn" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/base_margin_vertical" android:text="@string/Retry" style="@style/buttonPrimaryStyle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/splash_content_select_shop" android:background="@color/black_transparent_70percent" android:paddingLeft="@dimen/base_margin_horizontal" android:paddingTop="10.0dip" android:paddingRight="@dimen/base_margin_horizontal" android:paddingBottom="30.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/textIconColorPrimary" android:gravity="center" android:paddingTop="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Select_the_country_where_you_want_to_shop" android:lines="2" />
+            <Spinner android:id="@id/splash_shop_selection_spinner" android:background="@drawable/spinner_selector_white" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/base_margin_vertical_half" android:layout_marginBottom="@dimen/base_margin_vertical" android:spinnerMode="dialog" />
+            <Button android:id="@id/splash_continue_to_shop_btn" android:visibility="invisible" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/Continue" style="@style/buttonPrimaryStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

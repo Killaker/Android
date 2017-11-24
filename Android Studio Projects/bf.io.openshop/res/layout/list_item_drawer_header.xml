@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/drawer_background" android:scaleType="centerCrop" android:layout_alignBottom="@id/navigation_drawer_list_header_linear_layout" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/navigation_drawer_list_header_linear_layout" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/user" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/textIconColorPrimary" android:id="@id/navigation_drawer_list_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/base_margin_vertical_half" android:text="@string/Unknown_user" />
+    </LinearLayout>
+</RelativeLayout>
